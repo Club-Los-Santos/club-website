@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+section::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%; /* Increase the size to cover the entire section */
+    height: 200%; /* Increase the size to cover the entire section */
+    background-image: url("../images/yaminote.png");
+    background-size: cover;
+    filter: blur(12px); /* Adjust the blur value as needed */
+    z-index: -1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity here */
+    z-index: -1;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    position: relative;
+}
+
+
+.article {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px; /* Add padding to the sides */
+    transform: translateY(25vh);
+}
+
+
+.article h1 {
+    font-size: 36px;
+    color: #FFFFFF;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.article p {
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+
+.article .btn {
+    color: #fff;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #7289da; /* Discord color */
+    display: inline-block;
+}
+
+.article .btn:hover {
+    background-color: #4339fa;
+    transition: 0.5s ease;
+}
+.discord-logo {
+    width: 20px; /* Set the width of the Discord logo */
+    height: auto; /* Maintain aspect ratio */
+    vertical-align: middle; /* Align the Discord logo vertically with the text */
+    margin-right: 10px; /* Add some right margin for spacing */
+}
+
+/* Add this class to style the typing animation */
+.typewriter {
+    overflow: hidden; /* Hide overflow to create typing effect */
+    border-right: .15em solid orange; /* Cursor effect */
+    white-space: nowrap; /* Keep the text in one line */
+    margin: 0 auto; /* Center the text */
+    animation: typing 3.5s steps(40, end); /* Adjust animation duration and steps */
+}
+
+/* Keyframes for the typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+footer {
+    padding: 10px;
+    color: #f15048;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .cover-image {
+    width: 100%; /* Ensure image takes full width */
+    max-height: 400px; /* Adjust max-height for smaller screens */
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .article {
+        transform: translateY(15vh); /* Adjust vertical position for better centering */
+    }
+}
