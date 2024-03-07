@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+@font-face {
+    font-family: 'Kalufonia';
+    src: url('../font/kalufonia.woff') format('woff'), /* Ganti path/to/ dengan lokasi file font */
+         url('../font/kalufonia.woff2') format('woff2'); /* Ganti path/to/ dengan lokasi file font */
+    /* Tambahkan varian font seperti font-weight dan font-style jika diperlukan */
+}
+
 
 * {
     margin: 0;
@@ -20,7 +27,7 @@ section::before {
     left: -50%;
     width: 200%; /* Increase the size to cover the entire section */
     height: 200%; /* Increase the size to cover the entire section */
-    background-image: url("../images/yaminote.png");
+    background-image: url("../images/bg.gif");
     background-size: cover;
     filter: blur(12px); /* Adjust the blur value as needed */
     z-index: -1;
@@ -75,12 +82,14 @@ section::before {
     text-decoration: none;
     background-color: #7289da; /* Discord color */
     display: inline-block;
+    border-radius: 20px; /* Add border-radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add transition effect */
 }
 
 .article .btn:hover {
     background-color: #4339fa;
-    transition: 0.5s ease;
 }
+
 .discord-logo {
     width: 20px; /* Set the width of the Discord logo */
     height: auto; /* Maintain aspect ratio */
@@ -97,6 +106,25 @@ section::before {
     animation: typing 3.5s steps(40, end); /* Adjust animation duration and steps */
 }
 
+
+
+@media only screen and (min-width: 768px) {
+    .article {
+        width: 60%; /* Adjust the width of the article container */
+        margin: auto; /* Center the article container */
+        text-align: center; /* Center-align text */
+    }
+
+    .article p {
+        max-width: 80%; /* Limit the maximum width of the description text */
+        margin: auto; /* Center the description text */
+        margin-bottom: 40px; /* Add space below the paragraph text */
+    }
+    
+}
+
+
+
 /* Keyframes for the typing animation */
 @keyframes typing {
     from {
@@ -106,14 +134,28 @@ section::before {
         width: 100%;
     }
 }
-
 footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
     padding: 10px;
-    color: #f15048;
-    text-align: center;
+    color: white;
     font-weight: bold;
+    font-size: 13px; /* Ukuran teks pada desktop */
+    font-family: 'Kalufonia', sans-serif; /* Gunakan font Kalufonia */
 }
 
+@media only screen and (max-width: 768px) {
+    section::before {
+        width: 180%; /* Gambar latar belakang mengambil 100% lebar layar */
+        height: 180%; /* Gambar latar belakang mengambil 100% tinggi layar */
+        background-size: cover; /* Gambar diatur agar mengisi seluruh area latar belakang */
+        background-position: center; /* Gambar diatur agar posisinya berada di tengah */
+    }
+    footer {
+        font-size: 11px; /* Ukuran teks pada perangkat seluler */
+    }
+}
 .container .cover-image {
     width: 100%; /* Ensure image takes full width */
     max-height: 400px; /* Adjust max-height for smaller screens */
@@ -122,9 +164,3 @@ footer {
     object-position: center;
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 600px) {
-    .article {
-        transform: translateY(15vh); /* Adjust vertical position for better centering */
-    }
-}
