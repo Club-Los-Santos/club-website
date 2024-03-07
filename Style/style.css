@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+section {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url("../Gambar/yaminote.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+.article {
+    width: 100%;
+    text-align: center;
+    padding: 0 20px; /* Add padding to the sides */
+    transform: translateY(25vh);
+}
+
+.article h1 {
+    font-size: 36px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    font-weight: 800;
+    margin-bottom: 25px;
+}
+
+.article p {
+    font-size: 18px;
+    color: #7e7e7e;
+    line-height: 1.5;
+    margin-bottom: 30px; /* Reduce margin for smaller screens */
+}
+
+.article .btn {
+    color: #fff;
+    padding: 12px 25px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #f15048;
+    display: inline-block; /* Ensure button width fits content */
+}
+
+.article .btn:hover {
+    background-color: #4339fa;
+    transition: 0.5s ease;
+}
+
+footer {
+    padding: 10px;
+    color: #f15048;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container .cover-image {
+    width: 100%; /* Ensure image takes full width */
+    max-height: 400px; /* Adjust max-height for smaller screens */
+    border-radius: 5px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+    .article {
+        transform: translateY(15vh); /* Adjust vertical position for better centering */
+    }
+}
