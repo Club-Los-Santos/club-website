@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
 @font-face {
     font-family: 'Kalufonia';
-    src: url('../font/kalufonia.woff') format('woff'), /* Ganti path/to/ dengan lokasi file font */
-         url('../font/kalufonia.woff2') format('woff2'); /* Ganti path/to/ dengan lokasi file font */
-    /* Tambahkan varian font seperti font-weight dan font-style jika diperlukan */
+    src: url('../font/kalufonia.woff') format('woff'), 
+         url('../font/kalufonia.woff2') format('woff2'); 
+    
 }
 
 
@@ -134,6 +134,7 @@ section::before {
         width: 100%;
     }
 }
+/*
 footer {
     position: fixed;
     bottom: 0;
@@ -141,9 +142,9 @@ footer {
     padding: 10px;
     color: white;
     font-weight: bold;
-    font-size: 8px; /* Ukuran teks pada desktop */
-    font-family: 'Kalufonia', sans-serif; /* Gunakan font Kalufonia */
-}
+    font-size: 8px; 
+    font-family: 'Kalufonia', sans-serif;
+}*/
 
 @media only screen and (max-width: 600px) {
     .article {
@@ -162,14 +163,14 @@ footer {
         padding: 8px 20px; /* Kurangi padding tombol */
     }
     section::before {
-        width: 180%; /* Gambar latar belakang mengambil 100% lebar layar */
-        height: 180%; /* Gambar latar belakang mengambil 100% tinggi layar */
-        background-size: cover; /* Gambar diatur agar mengisi seluruh area latar belakang */
-        background-position: center; /* Gambar diatur agar posisinya berada di tengah */
+        width: 180%; 
+        height: 180%; 
+        background-size: cover; 
+        background-position: center; 
     }
-    footer {
-        font-size: 6px; /* Ukuran teks pada perangkat seluler */
-    }
+    /*footer {
+        font-size: 6px; 
+    }*/
 }
 .container .cover-image {
     width: 100%; /* Ensure image takes full width */
